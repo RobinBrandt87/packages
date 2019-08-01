@@ -1,0 +1,12 @@
+
+--- a/lib/pud/src/gpsdclient.c
++++ b/lib/pud/src/gpsdclient.c
+@@ -578,7 +578,7 @@ void readFromGpsd(GpsDaemon *gpsd, struc
+   if (!connectionTracking->connected) {
+     gpsReadCode = -1;
+   } else {
+-    gpsReadCode = gps_read(gpsdata);
++    gpsReadCode = gps_read(gpsdata,NULL,0);
+   }
+ 
+if (gpsReadCode > 0) {
